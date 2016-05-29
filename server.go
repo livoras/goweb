@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"html/template"
-	"log"
+	logger "log"
 	"net/http"
 	"strings"
 )
@@ -36,5 +36,5 @@ func main() {
 	fmt.Println("Fuck")
 	http.HandleFunc("/", sayHeloWorld)
 	http.HandleFunc("/login", login)
-	log.Fatal(http.ListenAndServe(":9090", nil))
+	logger.Fatal(http.ListenAndServe(":9090", nil))
 }
